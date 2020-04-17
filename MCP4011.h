@@ -44,9 +44,6 @@ class MCP4011 {
   private:
 
     uint8_t _tapPointer;
-
-  protected:
-
     uint8_t _CSPin;
     uint8_t _UDPin;
     unsigned long _incDelay;
