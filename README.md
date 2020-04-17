@@ -18,11 +18,13 @@ Library usage:
     digipot.begin() --> sets the initial position of the wiper 
                         #TODO: set three possible states: minimum wiper, 50% wiper or max wiper
     
-3. Increase/decrease the pot's value using the inc()/dec() methods
+3. Increase/decrease the pot's value using the inc()/dec() methods.
+
+4. Methods for retrieving the approximate resistance value, tap position and increment/decrement times (in microseconds) are included.
 
 Please read both .h and .cpp files are they are self-explanatory.
 
-If you have any suggestions/commits please feel free.
+If you have any suggestions/pull requests please feel free.
 
 Let's work together :smiley:
 
