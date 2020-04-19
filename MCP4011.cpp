@@ -204,7 +204,7 @@ void MCP4011::maxWiper() {
 
   }
 
-  _tapPointer / TAP_NUMBER;
+  _tapPointer = TAP_NUMBER;
 
 }
 
