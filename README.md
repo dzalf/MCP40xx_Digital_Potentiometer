@@ -22,9 +22,9 @@ Library usage:
 
 4. Methods for retrieving the approximate resistance value, tap position and increment/decrement times (in microseconds) are included.
 
-Please read both .h and .cpp files are they are self-explanatory.
+Please read both .h and .cpp files as they are self-explanatory.
 
-If you have any suggestions/pull requests please feel free.
+If you have any suggestions/pull requests please feel free to join me on the development.
 
 Let's work together :smiley:
 
