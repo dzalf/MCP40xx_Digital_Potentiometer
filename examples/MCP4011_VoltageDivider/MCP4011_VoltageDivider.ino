@@ -11,7 +11,7 @@
               Vary the resistance using a sinusoidal function
         Author: Daniel Melendrez
 
-        Ver: 0.1
+        Ver: 0.2 - General cleanup
         Date: March 2020
 */
 
@@ -53,7 +53,7 @@ void setup() {
 
   Serial.println(F("*********************************"));
   Serial.println(F("  MCP4011 Digital Potentiometer  "));
-  Serial.println(F("        LIBRARY ver 0.1          "));
+  Serial.println(F("        LIBRARY ver 0.2          "));
   Serial.println(F("*********************************"));
 
   resistorsArray[0] = step;
@@ -86,7 +86,7 @@ void loop() {
   
       voltsIn = analogIn * QUANTA;
 
-    //Serial.print("Volts: ");
+      //Serial.print("Volts: ");
       Serial.println(voltsIn, 2);   // Use Arduino's serial plotter to see this value
   
     
@@ -95,10 +95,10 @@ void loop() {
       Serial.println(Rx, 3);
 
       Serial.print("Mapped Rx: ");
-      Serial.printlpointer);
+      Serial.println(pointer);
 
       Serial.print("From array: ");
-      Serial.println(resistorsArrapointer]);
+      Serial.println(resistorsArray[pointer]);
 
      */
    }
