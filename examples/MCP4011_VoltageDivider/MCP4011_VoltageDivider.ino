@@ -76,7 +76,7 @@ void loop() {
        
     previousDAQ = nowTime;
 
-    Rx = 10*sin(2 * PI * fs * nowTime);  // frequency of this sinewave must comply with Nyquist freq (Fr >= 2fs)
+    Rx = 10*sin(2 * PI * fs * nowTime);  // frequency of this sine wave must comply with Nyquist freq (Fr >= 2fs)
 
      pointer = map(Rx, -10,10, 0, 63);
 
@@ -86,19 +86,19 @@ void loop() {
   
       voltsIn = analogIn * QUANTA;
 
-      //Serial.print("Volts: ");
-      Serial.println(voltsIn, 2);   // Use Arduino's serial ploter to see this value
+    //Serial.print("Volts: ");
+      Serial.println(voltsIn, 2);   // Use Arduino's serial plotter to see this value
   
     
 /*
-     Serial.print("Rx: ");
+      Serial.print("Rx: ");
       Serial.println(Rx, 3);
 
       Serial.print("Mapped Rx: ");
       Serial.printlpointer);
 
       Serial.print("From array: ");
-     Serial.println(resistorsArrapointer]);
+      Serial.println(resistorsArrapointer]);
 
      */
    }
