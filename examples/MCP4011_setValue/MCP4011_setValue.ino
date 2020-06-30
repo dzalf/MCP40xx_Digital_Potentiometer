@@ -10,11 +10,14 @@
         Code: Set the value via the serial port
         Author: Daniel Melendrez
 
-        Ver: 0.1
-        Date: March 2020
+        Ver: 0.1 - Initial release
+             0.2 - Updated to latest library version. General cleanup
+        Date: July 2020
 */
 
 #include <MCP4011.h>
+
+#define MEASURED_RESISTANCE 48500.0
 
 // Pins declaration
 const int UDPin = 2;   // Pin 2 is UP/DOWN
@@ -33,7 +36,7 @@ bool serialFinished = false;
 
 String serialData = "";   // I know, I know. Serials are "evil" but what do you want from me?
 
-MCP4011 pot(CSPin, UDPin);
+MCP4011 pot = MCP4011(CSPin, UDPin);
 
 void setup() {
 
@@ -45,8 +48,8 @@ void setup() {
   Serial.begin(115200);
 
   Serial.println(F("*********************************"));
-  Serial.println(F("  MCP4011 Digital Potentiometer "));
-  Serial.println(F("        LIBRARY ver 0.1        "));
+  Serial.println(F("  MCP4011 Digital Potentiometer  "));
+  Serial.println(F("        LIBRARY Ver. 0.2         "));
   Serial.println(F("*********************************"));
 
   delay(500);
