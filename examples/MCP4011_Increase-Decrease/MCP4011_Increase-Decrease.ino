@@ -1,7 +1,7 @@
 /*
-        MCP4011 Digital Potentiomenter from Microchip
+        MCP4011 Digital Potentiometer from Microchip
 
-        It consist of a volatile, 6-bit digital Pot. Contreoller by an UP/~DOWN serial interface
+        It consist of a volatile, 6-bit digital Pot. Controller by an UP/~DOWN serial interface
         63 taps, Power-on Recall
 
         ********** LIBRARY TEST *******************
@@ -14,12 +14,12 @@
                     |       /\
                     |________|  (W)     
 
-        Ver: 0.1
-        Date: March 2020
+        Ver: 0.2 - Updated to latest library version. General cleanup
+        Date: July 2020
 */
 
 #include <MCP4011.h>
-#include <Bounce2.h>    // Debounce chattering using the ibrary: https://github.com/thomasfredericks/Bounce2
+#include <Bounce2.h>    // Debounce chattering using the Library: https://github.com/thomasfredericks/Bounce2
 
 // Pins declaration
 const int UDPin = 2;   // Pin 2 is UP/DOWN
@@ -53,7 +53,7 @@ void setup() {
   pinMode(pinUp, INPUT_PULLUP);
   pinMode(pinDwn, INPUT_PULLUP);
 
-  // Atach debouncing objects to push-buttons
+  // Attach debouncing objects to push-buttons
   up.attach(pinUp);
   dwn.attach(pinDwn);
 
@@ -65,7 +65,7 @@ void setup() {
 
   Serial.println(F("*********************************"));
   Serial.println(F("  MCP4011 Digital Potentiometer "));
-  Serial.println(F("        LIBRARY ver 0.1         "));
+  Serial.println(F("        LIBRARY Ver. 0.2         "));
   Serial.println(F("*********************************"));
 
   pinMode(upLed, OUTPUT);
@@ -77,7 +77,7 @@ void setup() {
 
 void loop() {
 
-  // Resistance increase routine
+  // Read button status
   if (up.update()) {
     if (up.fell()) {
 
@@ -91,7 +91,7 @@ void loop() {
     digitalWrite(upLed, LOW);
   }
 
-  // Resistance decrease routine
+  // Read button status
   if (dwn.update()) {
     if (dwn.fell()) {
 
@@ -107,6 +107,7 @@ void loop() {
 
 }
 
+// Resistance increase routine
 void increaseValue(){
 
       digitalWrite(upLed, HIGH);
@@ -115,6 +116,7 @@ void increaseValue(){
 
 }
 
+// Resistance decrease routine
 void decreaseValue(){
 
       digitalWrite(dwnLed, HIGH);
@@ -135,9 +137,9 @@ void readPotData(){
 
 void printRetrievedData(){
 
-    // Print data on serial port
-  Serial.println(F("*********************************"));
-    Serial.print("Tap: ");
+      // Print potentiometer data on serial port
+      Serial.println(F("*********************************"));
+      Serial.print("Tap: ");
       Serial.println(tapNum);
 
       Serial.print(F("Resistance (approx): "));
