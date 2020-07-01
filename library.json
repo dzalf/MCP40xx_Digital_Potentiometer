@@ -1,7 +1,7 @@
 {
     "name": "MCP40xx",
     "description": "MCP40xx Digital Volatile Potentiometers",
-    "keywords": "Digital Potentiometers, Digital Rheostat, DPOT, DigiPot, Texas Instruments",
+    "keywords": "MCP4011, MCP4012, MCP4013, MPC4014, Digital Potentiometers, Digital Rheostat, DPOT, DigiPot, Texas Instruments",
     "authors": [   
         {
             "name": "Daniel Melendrez",
