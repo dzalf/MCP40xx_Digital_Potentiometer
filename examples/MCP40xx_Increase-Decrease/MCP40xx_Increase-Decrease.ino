@@ -1,7 +1,7 @@
 /*
-        MCP4011 Digital Potentiometer from Microchip
+        MCP40xx Digital Potentiometer from Microchip
 
-        It consist of a volatile, 6-bit digital Pot. Controller by an UP/~DOWN serial interface
+        It consists of a volatile, 6-bit digital Pot controller via an UP/~DOWN serial interface
         63 taps, Power-on Recall
 
         ********** LIBRARY TEST *******************
@@ -18,7 +18,7 @@
         Date: July 2020
 */
 
-#include <MCP4011.h>
+#include <MCP40xx.h>
 #include <Bounce2.h>    // Debounce chattering using the Library: https://github.com/thomasfredericks/Bounce2
 
 // Pins declaration
@@ -40,7 +40,7 @@ float elapsed;
 Bounce up = Bounce();
 Bounce dwn = Bounce();
 
-MCP4011 pot(CSPin, UDPin);
+MCP40xx pot(CSPin, UDPin);
 
 void setup() {
 
@@ -65,7 +65,7 @@ void setup() {
 
   Serial.println(F("*********************************"));
   Serial.println(F("  MCP4011 Digital Potentiometer "));
-  Serial.println(F("        LIBRARY Ver. 0.2         "));
+  Serial.println(F("        LIBRARY Ver. 1.1.2         "));
   Serial.println(F("*********************************"));
 
   pinMode(upLed, OUTPUT);
@@ -127,7 +127,7 @@ void decreaseValue(){
 
 void readPotData(){
 
- // Retrieve Pot data
+      // Retrieve Pot data
       tapNum = pot.taps();
       pos = pot.wiper();
       Res = pot.readValue();
