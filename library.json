@@ -1,0 +1,23 @@
+{
+    "name": "MCP40xx",
+    "description": "MCP40xx Digital Volatile Potentiometers",
+    "keywords": "Digital Potentiometers, Digital Rheostat, DPOT, DigiPot, Texas Instruments",
+    "authors": [   
+        {
+            "name": "Daniel Melendrez",
+            "email": "dmelendrez@gmail.com",
+            "url": "https://github.com/dzalf",
+            "maintainer": true
+        }
+    ],
+    "repository": {
+        "type": "git",
+         "url": "https://github.com/dzalf/MCP40xx_Digital_Potentiometer"
+    },
+    "version": "1.1.1",
+    "homepage": "https://github.com/dzalf/MCP40xx_Digital_Potentiometer",
+    "frameworks": "Arduino",
+    "examples": [
+        "examples/*/*.ino"
+    ]
+}
