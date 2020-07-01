@@ -1,7 +1,7 @@
 /*
-        MCP4011 Digital Potentiomenter from Microchip
+        MCP40xx Digital Potentiomenter from Microchip
 
-        It consist of a volatile, 6-bit digital Pot. Contreoller by an UP/~DOWN serial interface
+        It consists of a volatile, 6-bit digital Pot. Controller by an UP/~DOWN serial interface
         63 taps, Power-on Recall
 
         ********** LIBRARY TEST *******************
@@ -15,7 +15,7 @@
         Date: March 2020
 */
 
-#include <MCP4011.h>
+#include <MCP40xx.h>
 
 #define QUANTA 4.94/1023      // Quantification factor (measured from +Vcc rail)
 #define MS 0.001
@@ -40,7 +40,7 @@ const float step =  NOMINAL_RESISTANCE/64;
 const float sampleRate =  100*MS;   // Fr [Hz]  
 const float fs = 1*MS;    // Frequency of the sinewave multiplied by seconds conversion factor
 
-MCP4011 pot(CSPin, UDPin);
+MCP40xx pot = MCP40xx(CSPin, UDPin);
 
 void setup() {
 
@@ -53,7 +53,7 @@ void setup() {
 
   Serial.println(F("*********************************"));
   Serial.println(F("  MCP4011 Digital Potentiometer  "));
-  Serial.println(F("        LIBRARY ver 0.1          "));
+  Serial.println(F("        LIBRARY ver 1.1          "));
   Serial.println(F("*********************************"));
 
   resistorsArray[0] = step;
