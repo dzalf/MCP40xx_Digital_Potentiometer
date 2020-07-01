@@ -39,10 +39,10 @@ class MCP40xx {
         MCP4014
 	};
     
-    const char MCP4011_LBL[8] = "MCP4011";
-    const char MCP4012_LBL[8] = "MCP4012";
-    const char MCP4013_LBL[8] = "MCP4013";
-    const char MCP4014_LBL[8] = "MCP4014";
+    const char MCP4011_LBL[8] PROGMEM = "MCP4011";
+    const char MCP4012_LBL[8] PROGMEM = "MCP4012";
+    const char MCP4013_LBL[8] PROGMEM = "MCP4013";
+    const char MCP4014_LBL[8] PROGMEM = "MCP4014";
     
     const char *const DIGIPOT_LABELS[4] PROGMEM = {MCP4011_LBL, MCP4012_LBL, MCP4013_LBL, MCP4014_LBL};
 	
