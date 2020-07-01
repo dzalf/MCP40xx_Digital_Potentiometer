@@ -31,3 +31,4 @@ decMicros			KEYWORD2
 ###########################################
 
 nominal				LITERAL1
+DIGIPOT_LABELS  LITERAL1
