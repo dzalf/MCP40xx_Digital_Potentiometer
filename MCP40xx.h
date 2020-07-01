@@ -28,7 +28,24 @@ class MCP40xx {
     // Constructors:
     MCP40xx(uint8_t cs, uint8_t ud);
     MCP40xx(uint8_t cs, uint8_t ud, bool dbg);
-
+    
+    // Members
+    
+    //The model of the device sets the value of the full-scale resisatance
+	enum Model {
+		MCP4011,
+		MCP4012,
+		MCP4013,
+        MCP4014
+	};
+    
+    const char MCP4011_LBL[7] = "MCP4011";
+    const char MCP4012_LBL[7] = "MCP4012";
+    const char MCP4013_LBL[7] = "MCP4013";
+    const char MCP4014_LBL[7] = "MCP4014";
+    
+    const char *const DIGIPOT_LABELS[4] PROGMEM = {MCP4011_LBL, MCP4012_LBL, MCP4013_LBL, MCP4014_LBL};
+	
     // Methods:
 
     // Setup the device's connections
