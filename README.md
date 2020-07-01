@@ -16,7 +16,8 @@ Library usage:
     
     digipot.setup() --> assigns and initialises the digital pins
     digipot.begin() --> sets the initial position of the wiper 
-                        #TODO: set three possible states: minimum wiper, 50% wiper or max wiper
+                        
+     #TODO: set three possible states: ~~minimum wiper~~ (done!), 50% wiper or ~~max wiper~~(done!)
     
 3. Increase/decrease the pot's value using the inc()/dec() methods.
 
