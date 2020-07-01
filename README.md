@@ -1,6 +1,6 @@
 # MCP40xx_Digital_Potentiometer
 
-Arduino/Teensy (C/C++) library for Microchip MCP4011/12/13/14 64 taps digital [potentiometer](http://ww1.microchip.com/downloads/en/DeviceDoc/20001978D.pdf)
+Arduino/Teensy library for Microchip MCP4011/12/13/14 64 taps digital [potentiometer](http://ww1.microchip.com/downloads/en/DeviceDoc/20001978D.pdf)
 
 Library usage:
 
