@@ -1,7 +1,7 @@
 /*
-        MCP4011 Digital Potentiomenter from Microchip
+        MCP40xx Digital Potentiomenter from Microchip
 
-        It consist of a volatile, 6-bit digital Pot. Contreoller by an UP/~DOWN serial interface
+        It consist of a volatile, 6-bit digital Pot. Controller by an UP/~DOWN serial interface
         63 taps, Power-on Recall
 
         ********** LIBRARY TEST *******************
@@ -15,7 +15,7 @@
         Date: July 2020
 */
 
-#include <MCP4011.h>
+#include <MCP40xx.h>
 
 #define MEASURED_RESISTANCE 48500.0
 
@@ -36,7 +36,7 @@ bool serialFinished = false;
 
 String serialData = "";   // I know, I know. Serials are "evil" but what do you want from me?
 
-MCP4011 pot = MCP4011(CSPin, UDPin);
+MCP40xx pot = MCP40xx(CSPin, UDPin);
 
 void setup() {
 
@@ -64,7 +64,7 @@ void loop() {
 
     Rx = serialData.toFloat();
 
-    if ((Rx >= 0.0) && (Rx <= NOMINAL_RESISTANCE)) {
+    if ((Rx >= 0.0) && (Rx <= MEASURED_RESISTANCE)) {
 
       target = pot.setValue(Rx);
 
