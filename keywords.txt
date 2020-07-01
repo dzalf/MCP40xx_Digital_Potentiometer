@@ -1,12 +1,12 @@
 ###########################################
-# Syntax Coloring MCP4011 Library
+# Syntax Coloring MCP40xx Library
 ###########################################
 
 ###########################################
 # Datatypes (KEYWORD1)
 ###########################################
 
-MCP4011	KEYWORD1
+MCP40xx	KEYWORD1
 
 ###########################################
 # Methods and Functions (KEYWORD2)
