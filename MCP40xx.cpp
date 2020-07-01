@@ -1,9 +1,9 @@
 
 /*
-    Microchip 64 taps Single Digital Potentiometer
+    Microchip 63 taps Single Digital Potentiometer
     Simple two-wire UP/DOWN interface
     Author: dzalf - Daniel Melendrez
-    Date: March 2020 (COVID-19 Vibes)
+    Date: June 2020 (COVID-19 Vibes)
     Version: 1.1.1  - Initial deployment
              1.1.2  - General cleanup. Implemented new and overloaded methods that allow
                     to select the desired tap. It is now possible to select the nominal 
